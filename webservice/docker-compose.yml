@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  react-soap-epify:
+    container_name: epify-soap-container
+    image: rest-soap-epify
+    build: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - '8080:8080'
+    env_file:
+      - .env
